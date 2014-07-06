@@ -15,20 +15,20 @@ test('setup', function(t) {
 })
 
 test('alert', function(t) {
-  t.plan(3)
+  t.plan(4)
   var a = $('.alert')
   var al = new Alert(a)
   t.ok(al instanceof Alert, 'al should be instanceof Alert')
 
-  a.on('close.bs.alert', function() {
+  al.on('close.bs.alert', function() {
     t.pass('got close.bs.alert event')
   })
 
-  a.on('closed.bs.alert', function() {
+  al.on('closed.bs.alert', function() {
     t.pass('got closed.bs.alert event')
+    t.notOk($('.alert').length, '.alert should no longer exist')
   })
 
-  a.find('[data-dismiss="alert"]').first().emit('click', {
-    bubbles: true
-  })
+  var btn = $('.close')
+  btn[0].click()
 })
