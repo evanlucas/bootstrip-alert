@@ -1,6 +1,6 @@
 {
   "name": "bootstrip-alert",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bootstrap alert without jQuery",
   "main": "index.js",
   "scripts": {
