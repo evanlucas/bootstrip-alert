@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Bootstrap alert without jQuery",
   "main": "index.js",
+  "scripts": {
+    "test": "testling `pwd`"
+  },
   "dependencies": {
     "dom": "0.0.3",
     "inherits": "~2.0.1"
